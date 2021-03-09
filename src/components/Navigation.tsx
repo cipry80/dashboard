@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faComments,
@@ -6,45 +6,89 @@ import {
     faAddressCard,
     faHandsHelping,
     faBell,
-    faUserCircle
+    faUserCircle,
+    faSearch,
+    faCircle,
+    faTint
 } from '@fortawesome/free-solid-svg-icons';
+import { isMobile } from 'react-device-detect';
 
-const Navigation: React.FunctionComponent = () => {
+export const BottomNavigation = () => {
     return (
-        <nav role="navigation" aria-label="header navigation">
-            <ul className="navbar">
-                <li className="nav-item">search</li>
+        <nav className="nav-bottom" role="navigation" aria-label="footer navigation">
+            <div className="nav-item-home">
+                <NavLink className="navbar-link" to="/">
+                    <FontAwesomeIcon icon={faHome} />
+                </NavLink>
+            </div>
+            <ul className="navbar navbar-links">
                 <li className="nav-item">
-                    <NavLink className="navbar-item" to="/">
-                        <FontAwesomeIcon icon={faHome} />
-                        <div>Home</div>
-                    </NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink className="navbar-item" to="/feedback">
+                    <NavLink className="navbar-link" to="/feedback">
                         <FontAwesomeIcon icon={faComments} />
-                        <div>Feedback</div>
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="navbar-item" to="/contacts">
+                    <NavLink className="navbar-link" to="/contacts">
                         <FontAwesomeIcon icon={faAddressCard} />
-                        <div>Contacts</div>
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="navbar-item" to="/help">
+                    <NavLink className="navbar-link" to="/help">
                         <FontAwesomeIcon icon={faHandsHelping} />
-                        <div>Help</div>
                     </NavLink>
                 </li>
-                <div>
-                    <FontAwesomeIcon icon={faBell} />
-                    <FontAwesomeIcon icon={faUserCircle} />
-                </div>
             </ul>
         </nav>
     );
 };
 
-export default Navigation;
+export const TopNavigation: React.FunctionComponent = () => {
+    return (
+        <nav className="nav-top" role="navigation" aria-label="header navigation">
+            <Link className="brand" to="/">
+                <FontAwesomeIcon icon={faTint} />
+            </Link>
+            {!isMobile && (
+                <>
+                    <form className="search-form">
+                        <FontAwesomeIcon icon={faSearch} />
+                        <input type="search" name="search" placeholder="Search" aria-label="Search" />
+                    </form>
+                    <ul className="navbar navbar-links">
+                        <li className="nav-item">
+                            <NavLink className="navbar-item" to="/">
+                                Home
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="navbar-item" to="/feedback">
+                                Feedback
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="navbar-item" to="/contacts">
+                                Contacts
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="navbar-item" to="/help">
+                                Help
+                            </NavLink>
+                        </li>
+                    </ul>
+                </>
+            )}
+
+            <div className="navbar navbar-right">
+                <div className="svg-wrapper">
+                    <div className="notification">
+                        <FontAwesomeIcon icon={faCircle} />
+                        <FontAwesomeIcon icon={faBell} />
+                    </div>
+
+                    <FontAwesomeIcon icon={faUserCircle} />
+                </div>
+            </div>
+        </nav>
+    );
+};
