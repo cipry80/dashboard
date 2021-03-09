@@ -1,11 +1,9 @@
-import React from 'react';
-
-function Feedback() {
+const Feedback: React.FunctionComponent = () => {
     return (
         <div>
             <h1>Feedback</h1>
         </div>
     );
-}
+};
 
 export default Feedback;

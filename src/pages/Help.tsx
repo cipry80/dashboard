@@ -1,4 +1,4 @@
-const Help = () => {
+const Help: React.FunctionComponent = () => {
     return (
         <div>
             <h1>Help</h1>

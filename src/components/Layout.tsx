@@ -1,5 +1,5 @@
-import { Header, Footer } from './';
-const Layout = ({ children }) => {
+import { Header, Footer } from '.';
+const Layout: React.FunctionComponent = ({ children }) => {
     return (
         <>
             <Header />

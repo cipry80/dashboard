@@ -1,6 +1,7 @@
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import { Home, Feedback, Contacts, Help, NotFound } from './pages';
+
 import { Layout } from './components';
 
 function App() {
