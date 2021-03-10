@@ -29,6 +29,11 @@ nav {
     flex: 2;
 }
 
+.brand svg {
+    filter: drop-shadow(-5px -3px 1px rgba(143, 136, 210, 1));
+    transform: rotate(120deg);
+}
+
 .search-form {
     flex: 2;
 }
@@ -73,7 +78,7 @@ nav {
 }
 
 .nav-bottom .navbar {
-    flex: 2;
+    flex: 3;
     justify-content: space-around;
 }
 
@@ -83,11 +88,11 @@ nav {
     width: 25px;
 }
 
-.nav-item-home {
+.nav-bottom .nav-item-home {
     flex: 1;
 }
 
-.nav-item-home .navbar-link {
+.nav-bottom .nav-item-home .navbar-link {
     align-items: center;
     bottom: 0;
     border-radius: 8px;
@@ -96,18 +101,14 @@ nav {
     display: flex;
     height: 40px;
     justify-content: center;
-    left: 5%;
+    left: 4%;
     position: absolute;
     top: -20px;
     width: 35px;
 }
 
-.nav-item-home .navbar-item svg {
+.nav-bottom .nav-item-home svg {
     color: #ff392b;
     height: 25px;
     width: 25px;
-}
-
-.brand svg {
-    transform: rotate(120deg);
 }
