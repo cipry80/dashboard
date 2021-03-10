@@ -15,10 +15,12 @@ import { isMobile } from 'react-device-detect';
 
 export const PrimaryNavigation: React.FunctionComponent = () => {
     return (
-        <nav className="nav-top" role="navigation" aria-label="header navigation">
-            <Link className="brand" to="/">
-                <FontAwesomeIcon icon={faTint} />
-            </Link>
+        <nav className="nav-primary" role="navigation" aria-label="header navigation">
+            {isMobile && (
+                <Link className="brand" to="/">
+                    <FontAwesomeIcon icon={faTint} />
+                </Link>
+            )}
             {!isMobile && (
                 <>
                     <form className="search-form">

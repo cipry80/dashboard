@@ -1,9 +1,14 @@
-import { Header, Footer } from '.';
+import { Aside, Header, Footer } from '.';
+
 const Layout: React.FunctionComponent = ({ children }) => {
     return (
         <>
-            <Header />
-            <main>{children}</main>
+            <Aside />
+            <div className="container">
+                <Header />
+                <main>{children}</main>
+            </div>
+
             <Footer />
         </>
     );

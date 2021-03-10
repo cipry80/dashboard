@@ -1,7 +1,22 @@
-main {
+.layout {
     display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding-left: 25px;
-    padding-right: 25px;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
 }

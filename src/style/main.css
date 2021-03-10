@@ -1,0 +1,13 @@
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+@media (min-width: 768px) {
+    main {
+        /* flex-basis: calc(100% - 100px); */
+    }
+}

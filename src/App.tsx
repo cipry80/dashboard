@@ -6,7 +6,7 @@ import { Layout } from './components';
 
 function App() {
     return (
-        <div className="wrapper">
+        <div className="layout">
             <Layout>
                 <Switch>
                     <Route path="/" component={Home} exact />

@@ -2,16 +2,16 @@ import { isMobile } from 'react-device-detect';
 
 import { SecondaryNavigation } from './Navigation';
 
-const Footer: React.FunctionComponent = () => {
+const Aside: React.FunctionComponent = () => {
     return (
         <>
-            {isMobile ? (
-                <footer>
+            {!isMobile ? (
+                <aside>
                     <SecondaryNavigation />
-                </footer>
+                </aside>
             ) : null}
         </>
     );
 };
 
-export default Footer;
+export default Aside;
