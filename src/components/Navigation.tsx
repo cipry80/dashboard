@@ -13,36 +13,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { isMobile } from 'react-device-detect';
 
-export const BottomNavigation = () => {
-    return (
-        <nav className="nav-bottom" role="navigation" aria-label="footer navigation">
-            <div className="nav-item-home">
-                <NavLink className="navbar-link" to="/">
-                    <FontAwesomeIcon icon={faHome} />
-                </NavLink>
-            </div>
-            <ul className="navbar navbar-links">
-                <li className="nav-item">
-                    <NavLink className="navbar-link" to="/feedback">
-                        <FontAwesomeIcon icon={faComments} />
-                    </NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink className="navbar-link" to="/contacts">
-                        <FontAwesomeIcon icon={faAddressCard} />
-                    </NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink className="navbar-link" to="/help">
-                        <FontAwesomeIcon icon={faHandsHelping} />
-                    </NavLink>
-                </li>
-            </ul>
-        </nav>
-    );
-};
-
-export const TopNavigation: React.FunctionComponent = () => {
+export const PrimaryNavigation: React.FunctionComponent = () => {
     return (
         <nav className="nav-top" role="navigation" aria-label="header navigation">
             <Link className="brand" to="/">
@@ -89,6 +60,40 @@ export const TopNavigation: React.FunctionComponent = () => {
                     <FontAwesomeIcon icon={faUserCircle} />
                 </div>
             </div>
+        </nav>
+    );
+};
+
+export const SecondaryNavigation = () => {
+    return (
+        <nav className="nav-secondary" role="navigation" aria-label="footer navigation">
+            {!isMobile && (
+                <Link className="brand" to="/">
+                    <FontAwesomeIcon icon={faTint} />
+                </Link>
+            )}
+            <div className="nav-item-home">
+                <NavLink className="navbar-link" to="/">
+                    <FontAwesomeIcon icon={faHome} />
+                </NavLink>
+            </div>
+            <ul className="navbar navbar-links">
+                <li className="nav-item">
+                    <NavLink className="navbar-link" to="/feedback">
+                        <FontAwesomeIcon icon={faComments} />
+                    </NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="navbar-link" to="/contacts">
+                        <FontAwesomeIcon icon={faAddressCard} />
+                    </NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="navbar-link" to="/help">
+                        <FontAwesomeIcon icon={faHandsHelping} />
+                    </NavLink>
+                </li>
+            </ul>
         </nav>
     );
 };

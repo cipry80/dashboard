@@ -1,9 +1,9 @@
-import { TopNavigation } from './Navigation';
+import { PrimaryNavigation } from './Navigation';
 
 const Header: React.FunctionComponent = () => {
     return (
         <header>
-            <TopNavigation />
+            <PrimaryNavigation />
         </header>
     );
 };

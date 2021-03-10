@@ -1,17 +1,21 @@
-import { MobileView, isMobile } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 
-import { BottomNavigation } from './Navigation';
+import { SecondaryNavigation } from './Navigation';
 
 const Footer: React.FunctionComponent = () => {
-    // if (isMobile) {
-    //     return (
-    //         <footer>
-    //             <BottomNavigation />
-    //         </footer>
-    //     );
-    // }
-    // return null;
-    return <footer>{isMobile ? <BottomNavigation /> : null}</footer>;
+    return (
+        <>
+            {isMobile ? (
+                <footer>
+                    <SecondaryNavigation />
+                </footer>
+            ) : (
+                <aside>
+                    <SecondaryNavigation />
+                </aside>
+            )}
+        </>
+    );
 };
 
 export default Footer;
