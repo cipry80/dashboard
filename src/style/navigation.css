@@ -19,11 +19,15 @@ nav {
     display: flex;
 }
 
-.navbar {
+.navbar-links {
     display: flex;
-    flex: 1;
+    flex: 2;
     padding-left: 0;
     justify-content: flex-end;
+}
+
+.navbar-right {
+    flex: 1;
 }
 
 .brand {
@@ -36,7 +40,32 @@ nav {
 }
 
 .search-form {
-    flex: 2;
+    flex: 3;
+    height: 45px;
+    position: relative;
+    width: 100%;
+}
+
+.search-form svg {
+    left: 15px;
+    opacity: 0.4;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[type='search'] {
+    border-radius: 15px;
+    border: none;
+    background-color: #f7f8ff;
+    height: 100%;
+    text-indent: 40px;
+    width: inherit;
+}
+
+input[type='search']::-webkit-input-placeholder {
+    color: black;
+    opacity: 0.3;
 }
 
 .navbar-links {
@@ -65,12 +94,16 @@ nav {
     padding-left: 15px;
 }
 
-.nav-item {
-    color: #2b2b4c;
+.navbar-link {
+    color: black;
 }
 
 .nav-primary {
     height: 100%;
+}
+
+.nav-primary .navbar-links {
+    justify-content: space-evenly;
 }
 
 .nav-secondary {
@@ -115,6 +148,10 @@ nav {
 }
 
 @media (min-width: 769px) {
+    header {
+        height: 50px;
+        margin-top: 40px;
+    }
     aside {
         flex-shrink: 0;
         height: auto;
@@ -127,13 +164,13 @@ nav {
 
     .brand {
         flex: 1;
-        margin-top: 20px;
+        margin-top: 45px;
     }
 
     .nav-secondary .brand svg {
         color: #ffff;
-        width: 22px;
-        height: 20px;
+        width: 30px;
+        height: 25px;
     }
 
     .nav-secondary .navbar {

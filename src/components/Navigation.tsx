@@ -11,17 +11,17 @@ import {
     faCircle,
     faTint
 } from '@fortawesome/free-solid-svg-icons';
-import { isMobile } from 'react-device-detect';
+import { isMobileDevice } from '../helpers/isMobileDevice';
 
 export const PrimaryNavigation: React.FunctionComponent = () => {
     return (
         <nav className="nav-primary" role="navigation" aria-label="header navigation">
-            {isMobile && (
+            {isMobileDevice && (
                 <Link className="brand" to="/">
                     <FontAwesomeIcon icon={faTint} />
                 </Link>
             )}
-            {!isMobile && (
+            {!isMobileDevice && (
                 <>
                     <form className="search-form">
                         <FontAwesomeIcon icon={faSearch} />
@@ -29,22 +29,17 @@ export const PrimaryNavigation: React.FunctionComponent = () => {
                     </form>
                     <ul className="navbar navbar-links">
                         <li className="nav-item">
-                            <NavLink className="navbar-item" to="/">
-                                Home
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="navbar-item" to="/feedback">
+                            <NavLink className="navbar-link" to="/feedback">
                                 Feedback
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="navbar-item" to="/contacts">
+                            <NavLink className="navbar-link" to="/contacts">
                                 Contacts
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="navbar-item" to="/help">
+                            <NavLink className="navbar-link" to="/help">
                                 Help
                             </NavLink>
                         </li>
@@ -69,7 +64,7 @@ export const PrimaryNavigation: React.FunctionComponent = () => {
 export const SecondaryNavigation = () => {
     return (
         <nav className="nav-secondary" role="navigation" aria-label="footer navigation">
-            {!isMobile && (
+            {!isMobileDevice && (
                 <Link className="brand" to="/">
                     <FontAwesomeIcon icon={faTint} />
                 </Link>

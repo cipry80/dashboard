@@ -1,11 +1,10 @@
-import { isMobile } from 'react-device-detect';
-
+import { isMobileDevice } from '../helpers/isMobileDevice';
 import { SecondaryNavigation } from './Navigation';
 
 const Footer: React.FunctionComponent = () => {
     return (
         <>
-            {isMobile ? (
+            {isMobileDevice ? (
                 <footer>
                     <SecondaryNavigation />
                 </footer>

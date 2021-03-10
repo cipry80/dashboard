@@ -1,11 +1,10 @@
-import { isMobile } from 'react-device-detect';
-
+import { isMobileDevice } from '../helpers/isMobileDevice';
 import { SecondaryNavigation } from './Navigation';
 
 const Aside: React.FunctionComponent = () => {
     return (
         <>
-            {!isMobile ? (
+            {!isMobileDevice ? (
                 <aside>
                     <SecondaryNavigation />
                 </aside>
