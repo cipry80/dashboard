@@ -11,6 +11,7 @@ import {
     faCircle,
     faTint
 } from '@fortawesome/free-solid-svg-icons';
+
 import { isMobileDevice } from '../helpers/isMobileDevice';
 
 export const PrimaryNavigation: React.FunctionComponent = () => {
