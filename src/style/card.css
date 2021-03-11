@@ -1,7 +1,18 @@
 .card-group {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: -10px;
+}
+
+.card-group > * {
+    margin: 10px;
 }
 
 .card {
+    border: 1px solid red;
+    /* box-shadow: -2px 1px 10px 3px rgba(247, 248, 255, 0.75); */
     flex: 1;
+    padding: 0 15px;
 }

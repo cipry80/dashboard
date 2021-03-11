@@ -6,14 +6,18 @@ const Home: React.FunctionComponent = () => {
             <div className="card-main">
                 <ActionButtons />
                 <CardGroup>
-                    <Card />
-                    <Card />
-                    <Card />
+                    <Card>Card 1</Card>
+                    <Card>Card 2</Card>
+                    <Card>Card 3</Card>
                 </CardGroup>
                 <StatisticsGraph />
                 <CardGroup>
-                    <Card />
-                    <Card />
+                    <Card maxWidth="420px" height="320px">
+                        Card 1
+                    </Card>
+                    <Card maxWidth="420px" height="320px">
+                        Card 2
+                    </Card>
                 </CardGroup>
             </div>
             <MyCard />
