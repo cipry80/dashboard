@@ -1,0 +1,9 @@
+.home {
+    display: flex;
+}
+
+.card-main {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
