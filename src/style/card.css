@@ -101,6 +101,73 @@
     height: 355px;
 }
 
+.card-connect {
+    flex-direction: column;
+    padding: 25px 30px;
+    width: 100%;
+}
+
+.card-connect .card-header {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card-connect .card-header svg {
+    height: 40px;
+    width: 40px;
+}
+
+.card-connect .card-header_name {
+    margin-left: 20px;
+}
+
+.card-connect .card-header_name .card-title,
+.card-connect .card-header_name .card-text {
+    margin: 0;
+}
+
+.card-connect .card-header_name .card-title {
+    font-size: 16px;
+}
+
+.card-connect .card-header_name .card-text {
+    font-size: 13px;
+    padding-top: 3px;
+    opacity: 0.3;
+}
+
+.card-connect .card-icons span {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.card-connect .card-body .card-title {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.card-connect .card-footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.card-connect .card-footer .btn {
+    background-color: #3326ae;
+    border-radius: 20px;
+    border: none;
+    color: #ffff;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 15px;
+}
+
+.card-connect .card-footer svg {
+    margin-left: 10px;
+}
+
 @media screen and (min-width: 769px) {
     .card-main {
         margin-right: 10px;

@@ -1,17 +1,16 @@
 interface CardProps {
     height?: string;
-    maxWidth?: string;
+
     isActive?: boolean;
-    className: string;
+    classes: string;
 }
 
-const Card: React.FunctionComponent<CardProps> = ({ children, height, maxWidth, isActive, className }) => {
+const Card: React.FunctionComponent<CardProps> = ({ children, height, isActive, classes }) => {
     const style = {
-        maxWidth: maxWidth,
         height: height
     };
     return (
-        <div className={isActive ? `card ${className} active` : `card ${className}`} style={style}>
+        <div className={isActive ? `card ${classes} active` : `card ${classes}`} style={style}>
             {children}
         </div>
     );
