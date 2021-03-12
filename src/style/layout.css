@@ -7,16 +7,11 @@
     width: 100%;
 }
 
-
-
-@media (max-width: 768px) {
-    .container {
-        flex: 1;
-    }
-}
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .layout {
         flex-direction: column;
+    }
+    .container {
+        flex: 1;
     }
 }
