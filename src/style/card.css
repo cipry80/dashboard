@@ -16,44 +16,47 @@
 }
 
 .card {
-    align-items: flex-start;
     box-shadow: -2px 1px 10px 3px rgba(247, 248, 255, 1);
     box-sizing: border-box;
     border-radius: 15px;
     display: flex;
-    flex: 1;
-    flex-direction: column-reverse;
     min-width: 0;
     padding: 10px;
 }
 
-.card.active {
+.card-analytics {
+    align-items: flex-start;
+    flex: 1;
+    flex-direction: column-reverse;
+}
+
+.card-analytics.active {
     background-color: #ff392b;
 }
 
-.card-image {
-    flex: 1;
+.card-analytics .card-image {
+    flex: 2;
 }
 
-.card-body {
+.card-analytics .card-body {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-.card-title {
+.card-analytics .card-title {
     font-weight: 100;
     font-size: 10px;
     margin: 0;
     opacity: 0.5;
 }
 
-.card.active .card-title {
+.card-analytics.active .card-title {
     color: #ffff;
 }
 
-.card-text {
+.card-analytics .card-text {
     color: #3326ae;
     font-size: 20px;
     font-weight: bold;
@@ -62,8 +65,40 @@
     padding-top: 5px;
 }
 
-.card.active .card-text {
+.card-analytics.active .card-text {
     color: #ffff;
+}
+
+.card-statistics .card-image {
+    width: 100%;
+    height: 150px;
+}
+
+.card-spentTime {
+    flex-direction: column;
+}
+
+.card-spentTime .card-header {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.card-spentTime .card-header {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.card-spentTime .card-title {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.card-spentTime .card-image {
+    height: 355px;
 }
 
 @media screen and (min-width: 769px) {
@@ -79,24 +114,30 @@
         margin: 10px;
     }
 
-    .card {
+    .card-analytics {
+        align-items: center;
         display: flex;
         flex-direction: row;
+        height: 110px;
         padding: 15px;
         overflow: hidden;
     }
 
-    .card-image {
+    .card-analytics .card-image {
         flex: 1;
     }
 
-    .card-body {
+    .card-analytics .card-body {
         flex-direction: column;
         flex: 2;
         padding-left: 5px;
     }
 
-    .card-text {
+    .card-analytics .card-text {
         font-size: 25px;
+    }
+
+    .card-statistics .card-image {
+        height: 355px;
     }
 }

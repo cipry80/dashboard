@@ -1,0 +1,31 @@
+.tooltip {
+    border: 1px solid #c2e1f5;
+    border-radius: 10px;
+    position: relative;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+}
+
+.tooltip:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.tooltip:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-top-color: #ff392b;
+    border-width: 5px;
+    margin-left: -5px;
+}
+
+.tooltip-text {
+    font-size: 15px;
+    margin: 0;
+}

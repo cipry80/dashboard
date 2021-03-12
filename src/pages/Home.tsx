@@ -1,8 +1,9 @@
-import { ActionButtons, CardGroup, MyCard, StatisticsGraph, Card } from '../components';
+import { ActionButtons, CardGroup, MyCard, Card, Tooltip } from '../components';
 import { isMobileDevice } from '../helpers/isMobileDevice';
 
 import analytics from '../images/analytics.png';
-
+import statistics from '../images/statistics.png';
+import spentTime from '../images/spentTime.png';
 interface analyticsCardDataProps {
     image: string;
     title: string;
@@ -23,7 +24,12 @@ const Home: React.FunctionComponent = () => {
                 <CardGroup>
                     {analyticsCardData.map(({ image, title, amount, isActive }, index) => {
                         return (
-                            <Card key={index} isActive={isActive} height={isMobileDevice ? '160px' : ''}>
+                            <Card
+                                key={index}
+                                isActive={isActive}
+                                height={isMobileDevice ? '160px' : ''}
+                                className="card-analytics"
+                            >
                                 <img
                                     className="card-image"
                                     src={image}
@@ -32,19 +38,27 @@ const Home: React.FunctionComponent = () => {
                                     width={isMobileDevice ? '100%' : '50px'}
                                 />
                                 <div className="card-body">
-                                    <h5 className="card-title">{title.toUpperCase()}</h5>
+                                    <h2 className="card-title">{title.toUpperCase()}</h2>
                                     <p className="card-text">{amount.toLocaleString()}</p>
                                 </div>
                             </Card>
                         );
                     })}
                 </CardGroup>
-                <StatisticsGraph />
                 <CardGroup>
-                    <Card maxWidth="420px" height="320px">
-                        Card 1
+                    <Card className="card-statistics">
+                        <img className="card-image" src={statistics} alt="statistics graph" />
                     </Card>
-                    <Card maxWidth="420px" height="320px">
+                </CardGroup>
+                <CardGroup>
+                    <Card maxWidth="420px" height="320px" className="card-spentTime">
+                        <div className="card-header">
+                            <h2 className="card-title">Spent Time</h2>
+                            <Tooltip title="4h 26min" color="#ffff" backgroundColor="#FF392B" />
+                        </div>
+                        <img className="card-image" src={spentTime} alt="spent time graph" />
+                    </Card>
+                    <Card maxWidth="420px" height="320px" className="card-connect">
                         Card 2
                     </Card>
                 </CardGroup>
