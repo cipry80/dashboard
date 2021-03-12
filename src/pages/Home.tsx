@@ -29,7 +29,7 @@ const Home: React.FunctionComponent = () => {
                                     src={image}
                                     alt="analytics graph"
                                     height="55px"
-                                    width={isMobileDevice ? '100%' : '60px'}
+                                    width={isMobileDevice ? '100%' : '50px'}
                                 />
                                 <div className="card-body">
                                     <h5 className="card-title">{title.toUpperCase()}</h5>
