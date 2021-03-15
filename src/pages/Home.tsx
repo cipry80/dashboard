@@ -23,15 +23,10 @@ const Home: React.FunctionComponent = () => {
         <div className="home">
             <div className="card-main">
                 <ActionButtons />
-                <CardGroup>
+                <CardGroup classes="card-analytics">
                     {analyticsCardData.map(({ image, title, amount, isActive }, index) => {
                         return (
-                            <Card
-                                key={index}
-                                isActive={isActive}
-                                height={isMobileDevice ? '160px' : ''}
-                                classes="card-analytics"
-                            >
+                            <Card key={index} isActive={isActive} height={isMobileDevice ? '140px' : ''}>
                                 <img
                                     className="card-image"
                                     src={image}
@@ -47,12 +42,12 @@ const Home: React.FunctionComponent = () => {
                         );
                     })}
                 </CardGroup>
-                <CardGroup>
-                    <Card classes="card-statistics">
+                <CardGroup classes="card-statistics">
+                    <Card>
                         <img className="card-image" src={statistics} alt="statistics graph" />
                     </Card>
                 </CardGroup>
-                <CardGroup>
+                <CardGroup classes="card-other-statistics">
                     <Card height="320px" classes="card-spentTime">
                         <div className="card-header">
                             <h2 className="card-title">Spent Time</h2>

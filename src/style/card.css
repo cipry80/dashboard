@@ -24,13 +24,13 @@
     padding: 10px;
 }
 
-.card-analytics {
+.card-analytics .card {
     align-items: flex-start;
     flex: 1;
     flex-direction: column-reverse;
 }
 
-.card-analytics.active {
+.card-analytics .card.active {
     background-color: #ff392b;
 }
 
@@ -52,7 +52,7 @@
     opacity: 0.5;
 }
 
-.card-analytics.active .card-title {
+.card-analytics .card.active .card-title {
     color: #ffff;
 }
 
@@ -65,8 +65,12 @@
     padding-top: 5px;
 }
 
-.card-analytics.active .card-text {
+.card-analytics .card.active .card-text {
     color: #ffff;
+}
+
+.card-statistics .card {
+    width: 100%;
 }
 
 .card-statistics .card-image {
@@ -74,14 +78,26 @@
     height: 150px;
 }
 
-.card-spentTime {
-    flex-direction: column;
+.card-other-statistics {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.card-spentTime .card-header {
-    display: flex;
-    align-items: center;
+.card-other-statistics .card {
+    min-width: 280px;
+    max-height: 320px;
+    margin-bottom: 20px;
+}
+
+.card-other-statistics .card-image {
+    height: 100%;
+    width: 100%;
+}
+
+.card-spentTime {
+    flex-direction: column;
     flex: 1;
+    width: 100%;
 }
 
 .card-spentTime .card-header {
@@ -98,10 +114,11 @@
 }
 
 .card-spentTime .card-image {
-    height: 355px;
+    height: 80%;
 }
 
 .card-connect {
+    flex: 1;
     flex-direction: column;
     padding: 25px 30px;
     width: 100%;
@@ -143,8 +160,8 @@
 }
 
 .card-connect .card-body .card-title {
-    font-size: 22px;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.4;
 }
 
 .card-connect .card-footer {
@@ -181,7 +198,7 @@
         margin: 10px;
     }
 
-    .card-analytics {
+    .card-analytics .card {
         align-items: center;
         display: flex;
         flex-direction: row;
