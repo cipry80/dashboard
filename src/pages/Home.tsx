@@ -83,7 +83,11 @@ const Home: React.FunctionComponent = () => {
                     </Card>
                 </CardGroup>
             </div>
-            {!isMobileDevice && <MyCard />}
+            {!isMobileDevice && (
+                <MyCard>
+                    <h3>Total Sales</h3>
+                </MyCard>
+            )}
         </div>
     );
 };

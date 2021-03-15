@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: -5px;
+    margin-bottom: 10px;
 }
 
 .card-group > * {
@@ -192,6 +193,7 @@
 
     .card-group {
         margin: -10px;
+        margin-bottom: 30px;
     }
 
     .card-group > * {

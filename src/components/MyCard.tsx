@@ -1,5 +1,5 @@
-const MyCard: React.FunctionComponent = () => {
-    return <div className="myCard">My Card</div>;
+const MyCard: React.FunctionComponent = ({ children }) => {
+    return <div className="myCard">{children}</div>;
 };
 
 export default MyCard;
