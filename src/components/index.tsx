@@ -5,5 +5,5 @@ export { default as Aside } from './Aside';
 export { default as CardGroup } from './CardGroup';
 export { default as MyCard } from './MyCard';
 export { default as Card } from './Card';
-export { default as ActionButtons } from './ActionButtons';
+export { default as ToggleButtons } from './ToggleButtons';
 export { default as Tooltip } from './Tooltip';
