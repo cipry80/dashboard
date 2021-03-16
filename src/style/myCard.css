@@ -3,3 +3,16 @@
     border-radius: 15px;
     flex: 1;
 }
+
+.myCard h3 {
+    text-align: center;
+}
+
+.badge-total-sales {
+    background-color: #3326ae;
+    border-radius: 12px;
+    color: #ffff;
+    float: right;
+    font-size: 12px;
+    padding: 11px 15px;
+}
