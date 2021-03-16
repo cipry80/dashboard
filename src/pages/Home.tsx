@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ToggleButtons, CardGroup, MyCard, Card, Tooltip } from '../components';
+import { ToggleButtons, CardGroup, MyCard, Card, Tooltip, CircularProgressBar } from '../components';
 import { isMobileDevice } from '../helpers/isMobileDevice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faStar, faPlayCircle, faClock, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -94,6 +94,7 @@ const Home: React.FunctionComponent = () => {
                 <MyCard>
                     <h3>Total Sales</h3>
                     <span className="badge-total-sales">$10,600</span>
+                    <CircularProgressBar />
                 </MyCard>
             )}
         </div>

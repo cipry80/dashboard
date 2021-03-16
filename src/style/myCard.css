@@ -1,18 +1,19 @@
 .myCard {
     background-color: #f7f8ff;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex: 1;
 }
 
-.myCard h3 {
-    text-align: center;
-}
-
 .badge-total-sales {
+    align-self: flex-end;
     background-color: #3326ae;
     border-radius: 12px;
     color: #ffff;
-    float: right;
     font-size: 12px;
     padding: 11px 15px;
+    width: 10%;
 }

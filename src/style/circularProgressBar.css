@@ -1,0 +1,104 @@
+.box-outside {
+    align-items: center;
+    box-shadow: -3px -3px 7px #ffffffb2;
+    background-color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    height: 170px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 170px;
+}
+
+.box-outside svg {
+    fill: none;
+    height: 100%;
+    position: relative;
+    transform: rotate(-90deg);
+    width: 100%;
+}
+
+.box-outside svg circle {
+    animation: stroke 13.5s steps(500) forwards;
+    position: absolute;
+    stroke: #3326ae;
+    stroke-width: 8px;
+    stroke-dashoffset: 550px;
+    stroke-dasharray: 550px;
+    stroke-linecap: round;
+    transform-origin: center;
+}
+
+.box-outside .counter {
+    height: 25px;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.box-outside .counter span {
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.box-inside {
+    box-shadow: 0 2px 5px rgba(94, 104, 121, 0.945);
+    border-radius: 50%;
+    display: inline-block;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    width: 100px;
+}
+
+/* .box-outside .counter span:after {
+    animation: animate 10s steps(100) forwards;
+    content: '0%\A 1%\A 2%\A 3%\A 4%\A 5%\A 6%\A 7%\A 8%\A 9%\A 10%\A 11%\A 12%\A 13%\A 14%\A 15%\A 16%\A 17%\A 18%\A 19%\A 20%\A 21%\A 22%\A 23%\A 24%\A 25%\A 26%\A 27%\A 28%\A 29%\A 30%\A 31%\A 32%\A 33%\A 34%\A 35%\A 36%\A 37%\A 38%\A 39%\A 40%\A 41%\A 42%\A 43%\A 44%\A 45%\A 46%\A 47%\A 48%\A 49%\A 50%\A 51%\A 52%\A 53%\A 54%\A 55%\A 56%\A 57%\A 58%\A 59%\A 60%\A 61%\A 62%\A 63%\A 64%\A 65%\A 66%\A 67%\A 68%\A 69%\A 70%\A 71%\A 72%\A 73%\A 74%\A 75%\A 76%\A 77%\A 78%\A 79%\A 80%\A 81%\A 82%\A 83%\A 84%\A 85%\A 86%\A 87%\A 88%\A 89%\A 90%\A 91%\A 92%\A 93%\A 94%\A 95%\A 96%\A 97%\A 98%\A 99%\A 100%';
+    color: #3326ae;
+    position: absolute;
+    white-space: pre;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+
+/* @keyframes animate {
+    0% {
+        top: 0%;
+    }
+    100% {
+        top: -5000px;
+    }
+} */
+
+@keyframes stroke {
+    0% {
+        stroke-dashoffset: 550px;
+    }
+    100% {
+        stroke-dashoffset: calc(550px - (550px * 38) / 100);
+    }
+}
+
+/* .inside-circle__track {
+    stroke: #3326ae;
+}
+
+.inside-circle__thumb {
+    stroke: #3326ae;
+} */
+
+/* .progress-bar-container svg .outside-circle {
+    fill: #ffff;
+    position: absolute;
+    stroke-width: 250px;
+    transform-origin: center;
+    z-index: 1;
+} */

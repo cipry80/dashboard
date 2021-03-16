@@ -7,3 +7,4 @@ export { default as MyCard } from './MyCard';
 export { default as Card } from './Card';
 export { default as ToggleButtons } from './ToggleButtons';
 export { default as Tooltip } from './Tooltip';
+export { default as CircularProgressBar } from './CircularProgressBar';
