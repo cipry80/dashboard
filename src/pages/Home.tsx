@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import { ToggleButtons, CardGroup, MyCard, Card, Tooltip, CircularProgressBar } from '../components';
-import { isMobileDevice } from '../helpers/isMobileDevice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faUserCircle,
@@ -10,6 +8,10 @@ import {
     faChevronRight,
     faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
+
+import { ToggleButtons, CardGroup, CardWallet, Card, Tooltip, CircularProgressBar, MyCard } from '../components';
+
+import { isMobileDevice } from '../helpers/isMobileDevice';
 
 import analytics from '../images/analytics.png';
 import statistics from '../images/statistics.png';
@@ -98,12 +100,13 @@ const Home: React.FunctionComponent = () => {
                 )}
             </div>
             {(checked || !isMobileDevice) && (
-                <MyCard>
+                <CardWallet>
                     {!isMobileDevice && <FontAwesomeIcon icon={faPencilAlt} />}
                     {isMobileDevice && <h3>Total Sales</h3>}
                     <span className="badge-total-sales">$10,600</span>
                     <CircularProgressBar />
-                </MyCard>
+                    <MyCard />
+                </CardWallet>
             )}
         </div>
     );

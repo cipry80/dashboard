@@ -13,7 +13,7 @@
 }
 
 .toggle-switch svg:first-child {
-    color: white;
+    color: #bbbed9;
     left: 20px;
     position: absolute;
     top: 50%;
@@ -21,8 +21,13 @@
     z-index: 2;
 }
 
-.toggle-switch svg:last-child {
+.toggle-switch svg:first-child.active,
+.toggle-switch svg:last-child.active {
     color: white;
+}
+
+.toggle-switch svg:last-child {
+    color: #bbbed9;
     right: 18px;
     position: absolute;
     top: 50%;
