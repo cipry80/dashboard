@@ -1,7 +1,7 @@
 header,
 footer {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 header {
@@ -156,8 +156,8 @@ input[type='search']::-webkit-input-placeholder {
 @media screen and (min-width: 769px) {
     header,
     footer {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     header {

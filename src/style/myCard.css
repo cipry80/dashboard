@@ -1,11 +1,11 @@
 .myCard {
+    align-items: center;
     background-color: #f7f8ff;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     flex: 1;
+    padding: 20px 10px;
 }
 
 .badge-total-sales {
@@ -15,5 +15,9 @@
     color: #ffff;
     font-size: 12px;
     padding: 11px 15px;
-    width: 10%;
+}
+
+.myCard .fa-pencil-alt {
+    align-self: flex-end;
+    margin-bottom: 20px;
 }

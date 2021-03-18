@@ -20,7 +20,7 @@
 }
 
 .box-outside svg circle {
-    animation: stroke 13.5s steps(500) forwards;
+    animation: stroke 5s steps(500) forwards;
     position: absolute;
     stroke: #3326ae;
     stroke-width: 8px;
@@ -86,19 +86,3 @@
         stroke-dashoffset: calc(550px - (550px * 38) / 100);
     }
 }
-
-/* .inside-circle__track {
-    stroke: #3326ae;
-}
-
-.inside-circle__thumb {
-    stroke: #3326ae;
-} */
-
-/* .progress-bar-container svg .outside-circle {
-    fill: #ffff;
-    position: absolute;
-    stroke-width: 250px;
-    transform-origin: center;
-    z-index: 1;
-} */
