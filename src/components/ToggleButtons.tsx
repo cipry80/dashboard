@@ -11,7 +11,8 @@ const ToggleButtons: React.FunctionComponent<ToggleButtonsProps> = ({ checked, o
     console.log(checked, 'checked');
     const [isActive, setIsActive] = useState(true);
 
-    const toggleActive = () => setIsActive(value => !value);
+    const toggleActive = () => setIsActive(!isActive);
+
     return (
         <label className="toggle-switch">
             <FontAwesomeIcon icon={faChartBar} className={isActive ? 'active' : ''} onClick={toggleActive} />
