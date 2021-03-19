@@ -132,4 +132,16 @@ describe('App', () => {
         userEvent.click(helpIcon);
         screen.getByRole('heading', { name: /help/i });
     });
+
+    test('should show no match component if landing on a bad page', () => {
+        const history = createMemoryHistory();
+        history.push('/some/bad/route');
+        render(
+            <Router history={history}>
+                <App />
+            </Router>
+        );
+
+        screen.getByRole('heading', { name: /oops! page not found!/i });
+    });
 });
