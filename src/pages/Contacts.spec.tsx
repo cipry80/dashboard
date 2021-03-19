@@ -1,7 +1,6 @@
-import { render, screen, cleanup } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Contacts } from './';
 
-afterEach(cleanup);
 describe('pages/Contacts', () => {
     test('should contain specific text', () => {
         render(<Contacts />);
