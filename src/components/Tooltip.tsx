@@ -4,7 +4,7 @@ interface TooltipProps {
     backgroundColor?: string;
 }
 
-const Tooltip: React.FunctionComponent<TooltipProps> = ({ title, color, backgroundColor }) => {
+const Tooltip: React.FC<TooltipProps> = ({ title, color, backgroundColor }) => {
     const wrapperStyle = {
         backgroundColor
     };
