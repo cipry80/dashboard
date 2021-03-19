@@ -64,7 +64,7 @@ export const PrimaryNavigation: React.FunctionComponent = () => {
 
 export const SecondaryNavigation = () => {
     return (
-        <nav className="nav-secondary" role="navigation" aria-label="footer navigation">
+        <nav className="nav-secondary" role="navigation" aria-label="aside navigation">
             {!isMobileDevice && (
                 <Link className="brand" to="/">
                     <FontAwesomeIcon icon={faTint} aria-hidden="false" data-testid="svg-tint" />
