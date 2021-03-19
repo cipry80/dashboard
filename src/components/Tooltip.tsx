@@ -1,7 +1,7 @@
 interface TooltipProps {
     title: string;
-    color: string;
-    backgroundColor: string;
+    color?: string;
+    backgroundColor?: string;
 }
 
 const Tooltip: React.FunctionComponent<TooltipProps> = ({ title, color, backgroundColor }) => {
