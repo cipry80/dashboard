@@ -1,9 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import { Router } from 'react-router-dom';
-
-import { createMemoryHistory } from 'history';
-import App from './App';
 import userEvent from '@testing-library/user-event';
+import { Router } from 'react-router-dom';
+import { createMemoryHistory } from 'history';
+
+import App from './App';
+
 
 describe('App', () => {
     test('renders without crashing', () => {
@@ -22,9 +23,10 @@ describe('App', () => {
                 <App />
             </Router>
         );
-        const helpIcon = screen.getByTestId('svg-tint');
 
+        const helpIcon = screen.getByTestId('svg-tint');
         userEvent.click(helpIcon);
+
         screen.getByRole('heading', { name: /visitors/i });
         screen.getByRole('heading', { name: /customers/i });
         screen.getByRole('heading', { name: /orders/i });
@@ -39,9 +41,10 @@ describe('App', () => {
                 <App />
             </Router>
         );
-        const helpIcon = screen.getByTestId('svg-home');
 
+        const helpIcon = screen.getByTestId('svg-home');
         userEvent.click(helpIcon);
+
         screen.getByRole('heading', { name: /visitors/i });
         screen.getByRole('heading', { name: /customers/i });
         screen.getByRole('heading', { name: /orders/i });
@@ -56,11 +59,11 @@ describe('App', () => {
                 <App />
             </Router>
         );
-        const feedBackLink = screen.getByRole('link', {
+        const feedbackLink = screen.getByRole('link', {
             name: /feedback/i
         });
 
-        userEvent.click(feedBackLink);
+        userEvent.click(feedbackLink);
         screen.getByRole('heading', { name: /feedback/i });
     });
 
@@ -71,9 +74,9 @@ describe('App', () => {
                 <App />
             </Router>
         );
-        const feedBackIcon = screen.getByTestId('svg-comments');
+        const feedbackIcon = screen.getByTestId('svg-comments');
 
-        userEvent.click(feedBackIcon);
+        userEvent.click(feedbackIcon);
         screen.getByRole('heading', { name: /feedback/i });
     });
 
@@ -133,7 +136,7 @@ describe('App', () => {
         screen.getByRole('heading', { name: /help/i });
     });
 
-    test('should show no match component if landing on a bad page', () => {
+    test('should show NotFound component if landing on a bad page', () => {
         const history = createMemoryHistory();
         history.push('/some/bad/route');
         render(

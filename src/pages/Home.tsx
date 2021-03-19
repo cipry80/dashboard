@@ -22,13 +22,14 @@ interface analyticsCardDataProps {
     amount: number;
     isActive: boolean;
 }
+
 const analyticsCardData: analyticsCardDataProps[] = [
     { image: analytics, title: 'visitors', amount: 10320, isActive: false },
     { image: analytics, title: 'customers', amount: 4628, isActive: false },
     { image: analytics, title: 'orders', amount: 2980, isActive: true }
 ];
 
-const Home: React.FunctionComponent = () => {
+const Home: React.FC = () => {
     const [checked, setChecked] = useState(false);
 
     return (
