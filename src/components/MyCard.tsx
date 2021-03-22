@@ -6,7 +6,7 @@ const MyCard = () => {
         <div className="myCard">
             <div className="myCard-header">
                 <h3>My Card</h3>
-                <FontAwesomeIcon icon={faEllipsisH} />
+                <FontAwesomeIcon icon={faEllipsisH} aria-hidden="false" data-testid="svg-ellipsis" />
             </div>
 
             <div className="card-wrapper">
